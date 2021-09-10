@@ -1,5 +1,4 @@
 PIDFILE = 'rack.pid'
-require 'byebug'
 task :start do
     port = ENV['PORT'] || 9999
     sh "rackup config.ru -o 0.0.0.0 -p #{port} -D -P #{PIDFILE}"
